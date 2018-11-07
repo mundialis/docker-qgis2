@@ -20,7 +20,6 @@ USER_NAME=`basename $HOME`
 # The user home is mounted as HOME
 # --rm will remove the container as soon as it ends
 
-
 sudo docker run --rm --name qgis2 \
     -it \
     -v ${HOME}:/home/${USER_NAME} \
@@ -30,7 +29,7 @@ sudo docker run --rm --name qgis2 \
     mundialis/docker-qgis2
 ```
 
-Note: You can download the docker startup from above as a convenient start
-script: [qgis2](https://github.com/mundialis/docker-qgis2/blob/master/qgis2).
+Note: You can download above docker startup as a convenient start script:
+[qgis2](https://raw.githubusercontent.com/mundialis/docker-qgis2/master/qgis2).
 Download it, store it into $HOME/bin/ or /usr/local/bin/ (or likewise) and
 set the script to "executable".
