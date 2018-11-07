@@ -33,3 +33,5 @@ Note: You can download above docker startup as a convenient start script:
 [qgis2](https://raw.githubusercontent.com/mundialis/docker-qgis2/master/qgis2).
 Download it, store it into $HOME/bin/ or /usr/local/bin/ (or likewise) and
 set the script to "executable".
+
+QGIS SOURCE: ubuntugis-unstable
