@@ -3,6 +3,8 @@
 QGIS 2.18.x from [QGIS.org](http://qgis.org)
 
 INSTALLATION:
+
+Via [docker hub](https://hub.docker.com/r/mundialis/docker-qgis2/):
 ```
 docker pull mundialis/docker-qgis2
 ```
