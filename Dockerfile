@@ -7,6 +7,9 @@ ENV DEBIAN_FRONTEND noninteractive
 #   https://github.com/timcera/qgis-desktop-ubuntu
 #   https://github.com/wessm/Dockerfiles/tree/master/qgis2
 
+# Instead of compiling, this image is a "apt-get install" from
+# http://qgis.org/ubuntugis of the latest QGIS 2.18
+
 LABEL maintainer="Markus Neteler <neteler@mundialis.de>"
 
 RUN apt-get update -y && \
