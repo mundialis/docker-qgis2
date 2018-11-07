@@ -3,6 +3,10 @@ FROM ubuntu:xenial
 ENV TERM linux
 ENV DEBIAN_FRONTEND noninteractive
 
+# Dockerfile inspired by
+#   https://github.com/timcera/qgis-desktop-ubuntu
+#   https://github.com/wessm/Dockerfiles/tree/master/qgis2
+
 LABEL maintainer="Markus Neteler <neteler@mundialis.de>"
 
 RUN apt-get update -y && \
@@ -40,8 +44,8 @@ ENV QGIS_PROJECT_FILE /project/project.qgs
 
 # Called when the Docker image is started in the container
 
-ADD start.sh /start.sh
-RUN sudo chmod +x /start.sh
-CMD ["/start.sh"]
+ADD launch_prep.sh /launch_prep.sh
+RUN sudo chmod +x /launch_prep.sh
+CMD ["/launch_prep.sh"]
 
 

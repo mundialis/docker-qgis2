@@ -1,16 +1,24 @@
-# qgis2
+#!/bin/sh
 
-QGIS 2.18.x from [QGIS.org](http://qgis.org)
-
-INSTALLATION:
-```
-docker pull mundialis/docker-qgis2
-```
-
-USAGE:
-```
-# Startup of QGIS2 in docker, see below for download of this script
+# QGIS 2.18.latest in docker
 #
+# INSTALLATION:
+#    docker pull mundialis/docker-qgis2
+#
+# AUTHORS:
+#    mundialis GmbH & Co. KG
+#    Markus Neteler, 2018 <neteler@mundialis.de>
+#
+# inspired by
+#   https://github.com/timcera/qgis-desktop-ubuntu
+#   https://github.com/wessm/Dockerfiles/tree/master/qgis2
+#
+#
+# SOURCE CODE:
+#   https://github.com/mundialis/docker-qgis2
+#
+###################
+
 # get user name
 USER_NAME=`basename $HOME`
 
@@ -28,9 +36,4 @@ sudo docker run --rm --name qgis2 \
     -e DISPLAY=unix$DISPLAY \
     -e MYHOME=${HOME} \
     mundialis/docker-qgis2
-```
 
-Note: You can download the docker startup from above as a convenient start
-script: [qgis2](https://github.com/mundialis/docker-qgis2/blob/master/qgis2).
-Download it, store it into $HOME/bin/ or /usr/local/bin/ (or likewise) and
-set the script to "executable".
