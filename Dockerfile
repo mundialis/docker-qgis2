@@ -20,21 +20,22 @@ RUN echo "deb-src http://ppa.launchpad.net/ubuntugis/ubuntugis-unstable/ubuntu x
 RUN    apt-key adv --keyserver keyserver.ubuntu.com --recv-key CAEB3DC3BDF7FB45
 RUN    apt-key adv --keyserver keyserver.ubuntu.com --recv-key 089EBE08314DF160
 
-RUN    apt-get -y update                                                 \
-    && apt-get -y install --no-install-recommends                        \
-                                                  python-requests        \
-                                                  python-numpy           \
-                                                  python-pandas          \
-                                                  python-scipy           \
-                                                  python-matplotlib      \
-                                                  python-pyside.qtwebkit \
-                                                  gdal-bin               \
-                                                  qgis                   \
-                                                  python-qgis            \
-                                                  qgis-provider-grass    \
-                                                  grass                  \
-    && apt-get clean                                                     \
-    && apt-get purge                                                     \
+RUN    apt-get -y update                                                  \
+    && apt-get -y install --no-install-recommends                         \
+                                                  python-requests         \
+                                                  python-numpy            \
+                                                  python-pandas           \
+                                                  python-scipy            \
+                                                  python-matplotlib       \
+                                                  python-pyside.qtwebkit  \
+                                                  gdal-bin                \
+                                                  qgis                    \
+                                                  python-qgis             \
+                                                  qgis-provider-grass     \
+                                                  grass                   \
+                                                  firefox ca-certificates \
+    && apt-get clean                                                      \
+    && apt-get purge                                                      \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 ENV QGIS_DEBUG 5
