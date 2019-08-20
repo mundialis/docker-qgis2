@@ -2,11 +2,11 @@
 [Desktop Entry]
 Name=QGIS 2.18 LTR in Docker
 GenericName=QGIS 2.18 LTR in Docker
-Comment=GIS 2.18 LTR in Docker
-Exec=~/Documents/launch_scripts/docker_qgis.sh %U
+Comment=QGIS 2.18 LTR in Docker
+Exec=/home/norwin/bin/qgis2 %U
 Terminal=false
 Type=Application
 StartupNotify=true
 MimeType=text/shp;
-Icon=/usr/local/qgis-icon-60x60.png
+Icon=/home/norwin/src/docker-qgis2/qgis-icon-60x60.png
 Categories=Science
