@@ -1,4 +1,4 @@
-FROM ubuntu:xenial
+FROM ubuntu:bionic
 
 ENV TERM linux
 ENV DEBIAN_FRONTEND noninteractive
@@ -16,8 +16,8 @@ RUN apt-get update -y && \
     apt-get install -y --no-install-recommends apt-utils sudo && \
     apt-get install -y --no-install-recommends nano wget software-properties-common python-software-properties
 
-RUN echo "deb http://ppa.launchpad.net/ubuntugis/ubuntugis-unstable/ubuntu xenial main" >> /etc/apt/sources.list
-RUN echo "deb-src http://ppa.launchpad.net/ubuntugis/ubuntugis-unstable/ubuntu xenial main " >> /etc/apt/sources.list
+RUN echo "deb http://ppa.launchpad.net/ubuntugis/ubuntugis-unstable/ubuntu bionic main" >> /etc/apt/sources.list
+RUN echo "deb-src http://ppa.launchpad.net/ubuntugis/ubuntugis-unstable/ubuntu bionic main " >> /etc/apt/sources.list
 
 # Key for qgis ubuntugis
 RUN    apt-key adv --keyserver keyserver.ubuntu.com --recv-key CAEB3DC3BDF7FB45
@@ -51,5 +51,3 @@ ENV QGIS_PROJECT_FILE /project/project.qgs
 ADD launch_prep.sh /launch_prep.sh
 RUN sudo chmod +x /launch_prep.sh
 CMD ["/launch_prep.sh"]
-
-
