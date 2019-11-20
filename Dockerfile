@@ -14,7 +14,7 @@ LABEL maintainer="Markus Neteler <neteler@mundialis.de>"
 
 RUN apt-get update -y && \
     apt-get install -y --no-install-recommends apt-utils sudo && \
-    apt-get install -y --no-install-recommends nano wget software-properties-common dirmngr
+    apt-get install -y --no-install-recommends nano wget software-properties-common dirmngr gpg-agent
 
 RUN echo "deb http://ppa.launchpad.net/ubuntugis/ubuntugis-unstable/ubuntu bionic main" >> /etc/apt/sources.list
 RUN echo "deb-src http://ppa.launchpad.net/ubuntugis/ubuntugis-unstable/ubuntu bionic main " >> /etc/apt/sources.list
