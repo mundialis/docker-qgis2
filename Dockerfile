@@ -16,12 +16,11 @@ RUN apt-get update -y && \
     apt-get install -y --no-install-recommends apt-utils sudo && \
     apt-get install -y --no-install-recommends nano wget software-properties-common dirmngr gpg-agent
 
-RUN echo "deb http://ppa.launchpad.net/ubuntugis/ubuntugis-unstable/ubuntu bionic main" >> /etc/apt/sources.list
-RUN echo "deb-src http://ppa.launchpad.net/ubuntugis/ubuntugis-unstable/ubuntu bionic main " >> /etc/apt/sources.list
+RUN echo "deb https://qgis.org/ubuntugis/ bionic main" >> /etc/apt/sources.list
+RUN echo "deb-src https://qgis.org/ubuntugis/ bionic main" >> /etc/apt/sources.list
 
 # Key for qgis ubuntugis
-RUN    apt-key adv --keyserver keyserver.ubuntu.com --recv-key CAEB3DC3BDF7FB45
-RUN    apt-key adv --keyserver keyserver.ubuntu.com --recv-key 089EBE08314DF160
+RUN    apt-key adv --keyserver keyserver.ubuntu.com --recv-key 51F523511C7028C3
 
 RUN    apt-get -y update                                                  \
     && apt-get -y install --no-install-recommends                         \
