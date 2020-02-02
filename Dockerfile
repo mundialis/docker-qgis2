@@ -16,7 +16,7 @@ RUN apt-get update -y && \
     apt-get install -y --no-install-recommends apt-utils sudo && \
     apt-get install -y --no-install-recommends nano wget software-properties-common dirmngr gpg-agent
 
-RUN echo "deb https://qgis.org/ubuntugis/ bionic main" >> /etc/apt/sources.list
+RUN echo "deb     https://qgis.org/ubuntugis/ bionic main" >> /etc/apt/sources.list
 RUN echo "deb-src https://qgis.org/ubuntugis/ bionic main" >> /etc/apt/sources.list
 
 # Key for qgis ubuntugis
@@ -48,5 +48,5 @@ ENV QGIS_PROJECT_FILE /project/project.qgs
 # Called when the Docker image is started in the container
 
 ADD launch_prep.sh /launch_prep.sh
-RUN sudo chmod +x /launch_prep.sh
+RUN chmod +x /launch_prep.sh
 CMD ["/launch_prep.sh"]
