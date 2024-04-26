@@ -1,4 +1,4 @@
-FROM ubuntu:jammy
+FROM ubuntu:noble
 
 ENV TERM linux
 ENV DEBIAN_FRONTEND noninteractive
