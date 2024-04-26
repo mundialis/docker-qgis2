@@ -29,8 +29,8 @@ USER_NAME=`basename $HOME`
 # --rm will remove the container as soon as it ends
 
 
-sudo docker run --rm --name qgis2 \
-    -it \
+docker run --rm --name qgis2 \
+    -i \
     -v ${HOME}:/home/${USER_NAME} \
     -v /tmp/.X11-unix:/tmp/.X11-unix \
     -e DISPLAY=unix$DISPLAY \
